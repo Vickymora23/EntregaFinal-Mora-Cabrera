@@ -1,0 +1,35 @@
+.navbar {
+    /* background-color: rgba(220, 20, 60, 0.365); */
+    border: 5px solid goldenrod;
+
+    height: 120px;
+    display: flex;
+    max-width: 100%;
+
+    
+}
+.icon-navbar{
+    width: 135px;
+    height: 115px;
+    margin-top: 4px;
+    margin-left: 20px;
+   
+}
+.list-navbar{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-around;
+list-style: none;
+}
+.cart-navbar{
+    width: 50px;
+    height: 50px;
+    margin: 30px;
+}
+.cart-widget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
