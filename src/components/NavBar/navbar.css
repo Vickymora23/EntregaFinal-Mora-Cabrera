@@ -1,11 +1,10 @@
 .navbar {
     /* background-color: rgba(220, 20, 60, 0.365); */
-    border: 5px solid goldenrod;
-
+    border: 5px solid rgb(23, 154, 156);
     height: 120px;
     display: flex;
     max-width: 100%;
-
+    background-color: rgb(241, 243, 245);
     
 }
 .icon-navbar{
@@ -21,7 +20,31 @@ display: flex;
 align-items: center;
 justify-content: space-around;
 list-style: none;
+font-size: 22px;
+
 }
+
+.list-item{
+        font-weight: 500;
+        text-align: center;
+        width: auto;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        color: black;
+      }
+
+.list-item:hover{
+        background-color: rgba(46, 108, 149, 0.609);
+        color: white;
+      }
+
+.list-item:hover{
+        cursor: pointer;
+      }
+
+
 .cart-navbar{
     width: 50px;
     height: 50px;
