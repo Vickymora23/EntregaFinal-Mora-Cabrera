@@ -3,19 +3,19 @@ import "./countController.css"
 import { useState } from 'react';
 
 
-const CountController = ({addToCart}) => {
+const CountController = ({ handleClick, stock }) => {
 const [ contador , setContador ] = useState (1)
 
 
 
 const sumar = () => {
-setContador (contador + 1)
-console.log ("Clickeamos el boton de sumar", contador);
-
+  if( contador < stock){
+  setContador (contador + 1);  
+  }
 };
 
 const borrar = () =>{
-  if(contador >1) {
+  if(contador > 1) {
     setContador(contador -1)
   }
     
@@ -32,7 +32,7 @@ const borrar = () =>{
        
         </div>
         <div>
-          <button onClick={ ()=> addToCart(contador)} className='add-to-cart'>Agregar al carrito </button>
+          <button onClick={ ()=> handleClick(contador)} className='add-to-cart'>Agregar al carrito </button>
         </div>
     </div>
   );
