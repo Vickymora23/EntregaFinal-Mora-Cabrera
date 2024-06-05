@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useContext } from "react";
 import FormularioCheckout from "./FormularioCheckout";
-import { CartContext } from "../../context/CartContext";
-import { addDoc, collection } from "firebase/firestore";
+import { CartContext } from "../../context/CartContext.jsx";
+import { addDoc, collection, setDoc, doc } from "firebase/firestore";
 import db from "../../db/db";
 import { Link } from "react-router-dom";
 import validateForm from "../../utils/validationYup.js";
@@ -22,7 +22,7 @@ const Checkout = () => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDeFault();
+    event.preventDefault();
     const order = {
       user: { ...dataForm },
       products: [...cart],
@@ -30,8 +30,7 @@ const Checkout = () => {
     };
 
     const response = await validateForm(dataForm);
-
-    if (response.status === "success") {
+     if (response.status === "success") {
       uploadOrder(order);
     } else {
       toast(response.error);
@@ -56,7 +55,7 @@ const Checkout = () => {
         </div>
       ) : (
         <FormularioCheckout
-          dataform={dataForm}
+          dataForm={dataForm}
           handleChangeInput={handleChangeInput}
           handleSubmit={handleSubmit}
         />

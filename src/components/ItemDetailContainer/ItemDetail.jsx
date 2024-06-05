@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useContext } from "react"
-import { CartContext } from "react"
+import { CartContext } from "../../context/CartContext.jsx"
 import { Link } from "react-router-dom";
 import CountController from "../Examples/CountController";
 import "./itemDetail.css"
@@ -8,7 +8,7 @@ import "./itemDetail.css"
 const ItemDetail = ({ product }) => {
 
   const { cart, addToCart } = useContext(CartContext)
-  const [clickAdd, setClickAdd] = useState(flase)
+  const [clickAdd, setClickAdd] = useState(false)
  
   const handleClick = (contador) =>{
   const productCart = { ...product, quantity: contador, total: product.price * contador }

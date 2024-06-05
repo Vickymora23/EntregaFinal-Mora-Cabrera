@@ -1,10 +1,18 @@
 import React from 'react'
 import "./countController.css"
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
 
 
 const CountController = ({ handleClick, stock }) => {
 const [ contador , setContador ] = useState (1)
+
+useEffect(() => {
+  console.log("1er useEffect");
+}, []);
+
+useEffect(() => {
+  console.log("2do useEffect");
+}, [contador]);
 
 
 

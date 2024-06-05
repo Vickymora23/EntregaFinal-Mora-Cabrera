@@ -4,7 +4,7 @@ import { ToastContainer } from "react-toastify";
 
 import NavBar from "./components/NavBar/NavBar.jsx";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.jsx";
-import CountController from "./components/Examples/CountController.jsx";
+/*import CountController from "./context/CartContext.jsx";*/
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
 import Cart from "./components/Cart/Cart.jsx";
@@ -41,7 +41,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
         </Routes>
 
-        <CountController addToCart={addToCart} />
+          
       </CartProvider>
     </BrowserRouter>
   );

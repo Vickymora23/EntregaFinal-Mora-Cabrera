@@ -4,7 +4,7 @@ const FormularioCheckout = ({ dataForm, handleChangeInput, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Nombre:</label>
-      <imput
+      <input
         type="text"
         id="name"
         name="name"
@@ -34,5 +34,7 @@ const FormularioCheckout = ({ dataForm, handleChangeInput, handleSubmit }) => {
     </form>
   );
 };
+
+
 
 export default FormularioCheckout;
